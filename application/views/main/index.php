@@ -219,6 +219,21 @@
 
                         <div class="topbar-divider d-none d-sm-block"></div>
 
+                        <!-- Nav Item - toko -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="tokoDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-store"></i>
+                                <!-- Counter - toko -->
+                                <span class="badge badge-danger badge-counter"></span>
+                                <span class=""> Toko</span>
+                            </a>
+
+
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

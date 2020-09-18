@@ -16,16 +16,32 @@
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
+
                     <!-- Logo -->
+                    <div class="ml-3 mr-auto">
+                        <a href="<?=base_url('') ?>" style="color: #858796; text-decoration: none;"><i class="fas fa-store-alt"></i> Toko Online</a>
+                    </div>
+
+                    <div class="dropdown">
+                        <a href="#" class="nav-link" id="kategoriDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span style="color: #858796">Kategori <i class="fa fa-chevron-down"></i></span>                        </a>
+                        <div class="dropdown-menu shadow animated--grow-in" aria-labelledby="kategoriDropdown">
+                            <ul>
+                                <li>Kategori 1</li>
+                                <li>Kategori 2</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+
                     <!-- Topbar Search -->
-                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
+                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-4 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group" style="width: 500px;">
+                            <input type="text" class="form-control bg-light border-0 small" style="border-top-left-radius: 20px;border-bottom-left-radius: 20px" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                            
+                                <button class="btn" type="button">
                                     <i class="fas fa-search fa-sm"></i>
                                 </button>
-                            </div>
                         </div>
                     </form>
 
@@ -39,7 +55,7 @@
                             </a>
                             <!-- Dropdown - Messages -->
                             <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
-                                <form class="form-inline mr-auto w-100 navbar-search">
+                                <form class="form-inline mr-auto navbar-search w-100">
                                     <div class="input-group">
                                         <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
                                         <div class="input-group-append">
@@ -60,7 +76,7 @@
                                 <span class="badge badge-danger badge-counter">3+</span>
                             </a>
                             <!-- Dropdown - Alerts -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
+                            <div class="dropdown-list dropdown-menu dropdown-menu-left shadow animated--fade-in" aria-labelledby="alertsDropdown">
                                 <h6 class="dropdown-header">
                                     Alerts Center
                                 </h6>
@@ -123,7 +139,7 @@
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img class="img-profile rounded-circle" src="">
+                                <i class="fas fa-user"></i>
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Nama Depan</span>
 
                             </a>
@@ -148,8 +164,8 @@
                                 </a>
                             </div>
                         </li>
-
                     </ul>
+
 
                 </nav>
                 <!-- End of Topbar -->

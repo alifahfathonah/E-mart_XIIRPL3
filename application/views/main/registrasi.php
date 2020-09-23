@@ -10,7 +10,7 @@
             </div>
             <form class="user" method="post" action="<?= base_url('auth/registrasi') ?>">
               <div class="form-group">
-                <input type="text" class="form-control form-control-user" id="nama" name="nama" placeholder="Nama Lengkap" value="<?= set_value('nama_depan') ?>">
+                <input type="text" class="form-control form-control-user" id="nama" name="nama" placeholder="Nama Lengkap" value="<?= set_value('nama') ?>">
                 <?= form_error('nama', '<small class="text-danger pl-3">', '</small>'); ?>
               </div>
               <div class="form-group">

@@ -41,16 +41,13 @@ class Auth extends CI_Controller{
 				'is_active' => 1,
 				'date_created' => time()
 			];
-			
 			$this->db->insert('tb_akun', $data1);
 			$last_id = $this->db->insert_id();
+
 			$data2 = [
 					'id_akun' => $last_id,
 					'img_profil' =>'default.jpg'
 			];
-
-			
-			
 			$this->db->insert('tb_det_akun',$data2);
 			redirect('auth');
 		}

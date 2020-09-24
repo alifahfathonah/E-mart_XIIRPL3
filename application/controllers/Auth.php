@@ -49,7 +49,57 @@ class Auth extends CI_Controller{
 					'img_profil' =>'default.jpg'
 			];
 			$this->db->insert('tb_det_akun',$data2);
-			redirect('auth');
+			$this->session->set_flashdata('EmailBelumDiaktivasi','Email belum diaktivasi!');
+			redirect('auth/login');
+		}
+	}
+
+	public function login()
+	{
+		$this->form_validation->set_rules('email_username', 'Email/username', 'required|trim');
+		$this->form_validation->set_rules('katasandi', 'Katasandi', 'required|trim');
+		if($this->form_validation->run() == false)
+		{
+			$data['title'] = 'Login';
+			$this->load->view('templates/auth_header',$data);
+			$this->load->view('main/login');
+			$this->load->view('templates/auth_footer');
+		}
+		else
+		{
+			$email_username = $this->input->post('email_username');
+			$katasandi = $this->input->post('katasandi');
+			$query = 'SELECT * FROM tb_akun WHERE email = "'.$email_username.'" or username = "'.$email_username.'"';
+
+			$result = $this->db->query($query)->row_array();
+			
+			if ($result) {
+	            // jika usernya aktif
+	            if ($result['is_active'] == 1) {
+	                // cek password
+	                if (password_verify($katasandi, $result['katasandi'])) {
+	                    $data = [
+	                        'email' => $result['email'],
+	                        'role_id' => $result['role_id']
+	                    ];
+	                    $this->session->set_userdata($data);
+	                    if ($result['role_id'] == 1) {
+	                        redirect('admin');
+	                    } else {
+	                        redirect('user');
+	                    }
+	                } else {
+	                    $this->session->set_flashdata('KatasandiSalah','Katasandi salah!');
+	                    redirect('auth/login');
+	                }
+	            } else {
+	                $this->session->set_flashdata('EmailBelumDiaktivasi','Email belum diaktivasi!');
+	                redirect('auth/login');
+	            }
+	        } else {
+	            $this->session->set_flashdata('Email/UsernameTidakAda','Email atau username tidak ada!');
+	            redirect('auth/login');
+	        }
 		}
 	}
 }

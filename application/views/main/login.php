@@ -16,12 +16,33 @@
                   <div class="text-center">
                     <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                   </div>
-                  <form class="user">
+                  <?php if($this->session->flashdata('EmailTidakAda')==true): ?>
+                    <div class="alert alert-danger" role="alert">
+                      <button aria-label='Close' data-dismiss='alert' class="close" type="button"><span aria-hidden="true" class="fa fa-times"></span></button>
+                      <p><?= $this->session->flashdata('EmailTidakAda') ?></p>
+                    </div>
+                  <?php endif; ?>
+                  <?php if($this->session->flashdata('EmailBelumDiaktivasi')==true): ?>
+                    <div class="alert alert-danger" role="alert">
+                      <button aria-label='Close' data-dismiss='alert' class="close" type="button"><span aria-hidden="true" class="fa fa-times"></span></button>
+                      <p><?= $this->session->flashdata('EmailBelumDiaktivasi') ?></p>
+                    </div>
+                  <?php endif; ?>
+                  <?php if($this->session->flashdata('KatasandiSalah')==true): ?>
+                    <div class="alert alert-danger" role="alert">
+                      <button aria-label='Close' data-dismiss='alert' class="close" type="button"><span aria-hidden="true" class="fa fa-times"></span></button>
+                      <p><?= $this->session->flashdata('KatasandiSalah') ?></p>
+                    </div>
+                  <?php endif; ?>
+                  
+                  <form class="user" method="post" action="<?= base_url('auth/login') ?>">
                     <div class="form-group">
-                      <input type="text" class="form-control form-control-user" id="email" aria-describedby="emailHelp" placeholder="Enter Email Address..." name="email">
+                      <input type="text" class="form-control form-control-user" id="email_username" aria-describedby="emailHelp" placeholder="Email atau username" name="email_username" value="<?= set_value('email_username') ?>">
+                      <?= form_error('email', '<small class="text-danger pl-3">', '</small>'); ?>
                     </div>
                     <div class="form-group">
-                      <input type="password" class="form-control form-control-user" id="password" placeholder="Password" name="password">
+                      <input type="password" class="form-control form-control-user" id="katasandi" placeholder="Katasandi" name="katasandi">
+                      <?= form_error('katasandi', '<small class="text-danger pl-3">', '</small>'); ?>
                     </div>
                     <div class="form-group">
                       <div class="custom-control custom-checkbox small">
@@ -29,9 +50,9 @@
                         <label class="custom-control-label" for="customCheck">Remember Me</label>
                       </div>
                     </div>
-                    <a href="index.html" class="btn btn-primary btn-user btn-block">
+                    <button type="submit" class="btn btn-primary btn-user btn-block">
                       Login
-                    </a>
+                    </button>
                     <hr>
                   </form>
                   <div class="text-center">

@@ -49,7 +49,7 @@ class Auth extends CI_Controller{
 					'img_profil' =>'default.jpg'
 			];
 			$this->db->insert('tb_det_akun',$data2);
-			$this->session->set_flashdata('EmailBelumDiaktivasi','Email belum diaktivasi!');
+			$this->session->set_flashdata('BerhasilDaftar','Akun berhasil didaftarkan! \\r\\n Silahkan login!');
 			redirect('auth/login');
 		}
 	}

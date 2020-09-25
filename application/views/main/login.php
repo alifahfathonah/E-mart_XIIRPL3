@@ -34,7 +34,12 @@
                       <p><?= $this->session->flashdata('KatasandiSalah') ?></p>
                     </div>
                   <?php endif; ?>
-                  
+                  <?php if($this->session->flashdata('BerhasilDaftar')==true): ?>
+                    <div class="alert alert-success" role="alert">
+                      <button aria-label='Close' data-dismiss='alert' class="close" type="button"><span aria-hidden="true" class="fa fa-times"></span></button>
+                      <p><?= $this->session->flashdata('BerhasilDaftar') ?></p>
+                    </div>
+                  <?php endif; ?>
                   <form class="user" method="post" action="<?= base_url('auth/login') ?>">
                     <div class="form-group">
                       <input type="text" class="form-control form-control-user" id="email_username" aria-describedby="emailHelp" placeholder="Email atau username" name="email_username" value="<?= set_value('email_username') ?>">

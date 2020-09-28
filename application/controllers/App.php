@@ -3,19 +3,16 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class App extends CI_Controller{
 
-	public function __construct()
-	{
-		parent::__construct();
-	}
 	public function index()
     {
-        $data['title'] = 'My Profile';
+        $data['title'] = 'Halaman Utama';
+        $id = $this->session->userdata('id_akun');
         $email = $this->session->userdata('email');
-        $username = $this->session->userdata('username');
-        $query = 'SELECT * FROM tb_akun WHERE email = "'.$email.'" or username = "'.$username.'"';
+        $query = 'SELECT * FROM tb_akun JOIN tb_det_akun ON tb_akun.id_akun = tb_det_akun.id_akun WHERE tb_akun.email = "'.$email.'"';
         $data['user'] = $this->db->query($query)->row_array();
 
         $this->load->view('templates/header', $data);
+        $this->load->view('templates/u_topbar',$data);
         $this->load->view('user/index', $data);
         $this->load->view('templates/footer');
     }

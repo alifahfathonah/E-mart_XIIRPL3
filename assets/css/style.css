@@ -11,7 +11,12 @@ input[type=number]:focus,
 [type=text].form-control:focus, 
 [type=password].form-control:focus, 
 [type=email].form-control:focus, 
-[type=tel].form-control:focus, 
+[type=tel].form-control:focus,
+button[type=button]:focus,
 [contenteditable].form-control:focus {
   box-shadow: none;
+}
+
+.search-panel:focus{
+	box-shadow: 2px black;
 }

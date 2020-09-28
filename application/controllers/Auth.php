@@ -12,10 +12,10 @@ class Auth extends CI_Controller{
 
 	public function index()
 	{
-		$data['title'] = "Login";
-		$this->load->view('templates/auth_header', $data);
-		$this->load->view('main/index');
-		$this->load->view('templates/auth_footer');
+		$data['title'] = "Login Page";
+		$this->load->view('templates/header', $data);
+		$this->load->view('auth/login');
+		$this->load->view('templates/footer');
 	}
 
 	public function registrasi()
@@ -28,9 +28,9 @@ class Auth extends CI_Controller{
 
 		if ($this->form_validation->run() == false) {
 			$data['title'] = 'Registrasi';
-			$this->load->view('templates/auth_header', $data);
-			$this->load->view('main/registrasi');
-			$this->load->view('templates/auth_footer');
+			$this->load->view('templates/header', $data);
+			$this->load->view('auth/registrasi');
+			$this->load->view('templates/footer');
 		} else {
 			$data1 = [
 				'nama' => htmlspecialchars($this->input->post('nama', true)),
@@ -61,9 +61,9 @@ class Auth extends CI_Controller{
 		if($this->form_validation->run() == false)
 		{
 			$data['title'] = 'Login';
-			$this->load->view('templates/auth_header',$data);
-			$this->load->view('main/login');
-			$this->load->view('templates/auth_footer');
+			$this->load->view('templates/header',$data);
+			$this->load->view('auth/login');
+			$this->load->view('templates/footer');
 		}
 		else
 		{
@@ -80,13 +80,14 @@ class Auth extends CI_Controller{
 	                if (password_verify($katasandi, $result['katasandi'])) {
 	                    $data = [
 	                        'email' => $result['email'],
+	                        'username' =>$result['username'],
 	                        'role_id' => $result['role_id']
 	                    ];
 	                    $this->session->set_userdata($data);
 	                    if ($result['role_id'] == 1) {
 	                        redirect('admin');
 	                    } else {
-	                        redirect('user');
+	                        redirect('app');
 	                    }
 	                } else {
 	                    $this->session->set_flashdata('KatasandiSalah','Katasandi salah!');
@@ -102,4 +103,19 @@ class Auth extends CI_Controller{
 	        }
 		}
 	}
+
+	public function logout()
+    {
+        $this->session->unset_userdata('email');
+        $this->session->unset_userdata('username');
+        $this->session->unset_userdata('role_id');
+
+        $this->session->set_flashdata('Logout', 'Berhasil logout!');
+        redirect('auth');
+    }
+
+
+
+
+
 }

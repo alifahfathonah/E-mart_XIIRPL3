@@ -103,7 +103,7 @@ class Auth extends CI_Controller{
         $this->session->unset_userdata('role_id');
 
         $this->session->set_flashdata('Logout', 'Berhasil logout!');
-        redirect('auth');
+        redirect('app');
     }
 
 

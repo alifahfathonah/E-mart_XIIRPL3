@@ -8,7 +8,7 @@ class App extends CI_Controller{
         $data['title'] = 'Halaman Utama';
         $id = $this->session->userdata('id_akun');
         $email = $this->session->userdata('email');
-        $query = 'SELECT * FROM tb_akun JOIN tb_det_akun ON tb_akun.id_akun = tb_det_akun.id_akun WHERE tb_akun.email = "'.$email.'"';
+        $query = 'SELECT * FROM tbl_akun JOIN tbl_det_akun ON tbl_akun.id_akun = tbl_det_akun.id_akun WHERE tbl_akun.email = "'.$email.'"';
         $data['user'] = $this->db->query($query)->row_array();
 
         if(!$this->session->userdata('email')==true)

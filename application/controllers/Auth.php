@@ -25,7 +25,7 @@ class Auth extends CI_Controller{
 		{
 			$email_username = $this->input->post('email_username');
 			$katasandi = $this->input->post('katasandi');
-			$query = 'SELECT * FROM tb_akun WHERE email = "'.$email_username.'" or username = "'.$email_username.'"';
+			$query = 'SELECT * FROM tbl_akun WHERE email = "'.$email_username.'" or username = "'.$email_username.'"';
 
 			$result = $this->db->query($query)->row_array();
 			
@@ -63,8 +63,8 @@ class Auth extends CI_Controller{
 	public function registrasi()
 	{
 		$this->form_validation->set_rules('nama', 'Nama', 'required|trim|min_length[3]|max_length[64]');
-		$this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email|max_length[64]|is_unique[tb_akun.email]');
-		$this->form_validation->set_rules('username', 'Username', 'required|trim|min_length[6]|max_length[16]|is_unique[tb_akun.username]');
+		$this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email|max_length[64]');
+		$this->form_validation->set_rules('username', 'Username', 'required|trim|min_length[6]|max_length[16]|is_unique[tbl_akun.username]');
 		$this->form_validation->set_rules('katasandi', 'Katasandi', 'required|trim|min_length[6]|matches[katasandi2]');
 		$this->form_validation->set_rules('katasandi2', 'Ulangi Katasandi', 'required|trim|matches[katasandi]');
 
@@ -83,14 +83,14 @@ class Auth extends CI_Controller{
 				'is_active' => 1,
 				'date_created' => time()
 			];
-			$this->db->insert('tb_akun', $data1);
+			$this->db->insert('tbl_akun', $data1);
 			$last_id = $this->db->insert_id();
 
 			$data2 = [
 					'id_akun' => $last_id,
 					'img_profil' =>'default.png'
 			];
-			$this->db->insert('tb_det_akun',$data2);
+			$this->db->insert('tbl_det_akun',$data2);
 			$this->session->set_flashdata('BerhasilDaftar','Akun berhasil didaftarkan! \\r\\n Silahkan login!');
 			redirect('auth');
 		}

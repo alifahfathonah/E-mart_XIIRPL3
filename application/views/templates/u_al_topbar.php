@@ -6,7 +6,7 @@
                     <div class="mt-2 ml-3">
                         <a href="<?=base_url('') ?>" style="color: #858796; text-decoration: none;"><i class="fas fa-store-alt"></i> Toko Online</a>
                     </div>
-                    <div class="dropdown mt-2">
+                    <div class="dropdown mt-2" style="margin-left: 30px;">
                         <a href="#" class="nav-link" id="kategoriDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span style="color: #858796">Kategori <i class="fa fa-chevron-down"></i></span>                        </a>
                         <div class="dropdown-menu shadow animated--grow-in" aria-labelledby="kategoriDropdown">
@@ -17,7 +17,7 @@
                         </div>
                     </div>
                     <!-- Topbar Search -->
-                    <div class="mt-2">
+                    <div class="mt-2" style="margin-left: 50px;">
                         <form class="d-none d-sm-inline-block form-inline my-2 my-md-0 navbar-search" style="min-width: 600px;">
                             <div class="input-group" style="width: 100%;">
                                 <input type="text" class="form-control bg-light border-0 small" style="border-top-left-radius: 20px;border-bottom-left-radius: 20px" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
@@ -29,7 +29,7 @@
                     </div>
                     
                     <!-- Topbar Navbar -->
-                    <ul class="navbar-nav" style="margin-left: 50px;">
+                    <ul class="navbar-nav" style="margin-left: 30px;">
 
                         <!-- Nav Item - Search Dropdown (Visible Only XS) -->
                         <li class="nav-item dropdown no-arrow d-sm-none">

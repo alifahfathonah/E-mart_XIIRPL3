@@ -3,6 +3,10 @@ ul li{
 }
 textarea:focus, 
 textarea.form-control:focus, 
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@600;700;800&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@600;700;800&family=Source+Sans+Pro:wght@300;400&display=swap');
+
 input.form-control:focus, 
 input[type=text]:focus, 
 input[type=password]:focus, 
@@ -15,87 +19,4 @@ input[type=number]:focus,
 button[type=button]:focus,
 [contenteditable].form-control:focus {
   box-shadow: none;
-}
-
-.btn-masuk{
-  border: 1px solid #5a5c69;
-  display: inline-block;
-  font-weight: 800;
-  color: #5a5c69;
-  text-align: center;
-  vertical-align: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background-color: transparent;
-  padding: 1px 0.65rem;
-  font-size: 1rem;
-  line-height: 2.5;
-  border-radius: 0.35rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-.btn-masuk a{
-	text-decoration: none;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .btn-masuk {
-    transition: none;
-  }
-}
-
-.btn-masuk:hover {
-  color: #858796;
-  text-decoration: none;
-}
-
-.btn-masuk .disabled, .btn-masuk:disabled {
-  opacity: 0.65;
-}
-
-.btn-masuk:not(:disabled):not(.disabled) {
-  cursor: pointer;
-}
-
-.btn-daftar{
-  border: 1px solid #5a5c69;
-  background-color: black;
-  display: inline-block;
-  font-weight: 800;
-  color: #5a5c69;
-  text-align: center;
-  vertical-align: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background-color: transparent;
-  padding: 1px 0.65rem;
-  font-size: 1rem;
-  line-height: 2.5;
-  border-radius: 0.35rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-.btn-daftar a{
-	text-decoration: none;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .btn-daftar {
-    transition: none;
-  }
-}
-
-.btn-daftar:hover {
-  color: #858796;
-  text-decoration: none;
-}
-
-.btn-daftar .disabled, .btn-daftar:disabled {
-  opacity: 0.65;
-}
-
-.btn-daftar:not(:disabled):not(.disabled) {
-  cursor: pointer;
 }

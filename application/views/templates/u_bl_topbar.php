@@ -6,7 +6,7 @@
                     <div class="mt-2 ml-3">
                         <a href="<?=base_url('') ?>" style="color: #858796; text-decoration: none;"><i class="fas fa-store-alt"></i> Toko Online</a>
                     </div>
-                    <div class="dropdown mt-2">
+                    <div class="dropdown mt-2 ml-5">
                         <a href="#" class="nav-link" id="kategoriDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span style="color: #858796">Kategori <i class="fa fa-chevron-down"></i></span>                        </a>
                         <div class="dropdown-menu shadow animated--grow-in" aria-labelledby="kategoriDropdown">
@@ -17,8 +17,8 @@
                         </div>
                     </div>
                     <!-- Topbar Search -->
-                    <div class="mt-2">
-                        <form class="d-none d-sm-inline-block form-inline my-2 my-md-0 navbar-search" style="min-width: 700px;">
+                    <div class="mt-2" style="margin-left: 50px;">
+                        <form class="d-none d-sm-inline-block form-inline my-2 my-md-0 navbar-search" style="min-width: 500px;">
                             <div class="input-group" style="width: 100%;">
                                 <input type="text" class="form-control bg-light border-0 small" style="border-top-left-radius: 20px;border-bottom-left-radius: 20px" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
                                 <button class="btn" type="button" style="background-color: #5a5c69;border-top-right-radius: 20px;border-bottom-right-radius: 20px;border-top-left-radius:0;border-bottom-left-radius: 0">
@@ -29,7 +29,7 @@
                     </div>
                     
                     <!-- Topbar Navbar -->
-                    <ul class="navbar-nav" style="margin-left: 90px;">
+                    <ul class="navbar-nav" style="margin-left: 130px;">
 
                         <!-- Nav Item - Search Dropdown (Visible Only XS) -->
                         <li class="nav-item dropdown no-arrow d-sm-none">
@@ -85,11 +85,11 @@
                             </div>
                         </li>
                         <div class="topbar-divider d-none d-sm-block"></div>
-                        <li class="nav-item mx-1 mr-2 mb-2 mt-3 ">
-                            <a class="btn-masuk" href="<?= base_url('auth') ?>">Masuk</a>
+                        <li class="nav-item mx-1 ml-3 mr-2 mb-2 mt-3 ">
+                            <a class="btn masuk" href="<?= base_url('auth') ?>">Masuk</a>
                         </li>
                         <li class="nav-item mx-1 mt-3">
-                            <a class="btn-daftar" href="<?= base_url('auth/registrasi')  ?>">Daftar</a>
+                            <a class="btn daftar" href="<?= base_url('auth/registrasi')  ?>">Daftar</a>
                         </li> 
                     </ul>
                 </nav>

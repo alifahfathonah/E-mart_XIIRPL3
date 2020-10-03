@@ -7,7 +7,7 @@
     </div>
 
     <!-- Content Row -->
-
+hapus
     <div class="row">
         <!-- Awal Slideshow -->
         <!-- <div class="slideshow-container">

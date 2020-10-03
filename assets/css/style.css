@@ -94,3 +94,7 @@ button[type=button]:focus,
 	to {opacity: 1}
 }
 /*Akhir Slideshow*/
+.barang {
+	width: 100px;
+	height: 200px;
+}

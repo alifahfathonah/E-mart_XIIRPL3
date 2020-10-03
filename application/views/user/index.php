@@ -7,7 +7,7 @@
     </div>
 
     <!-- Content Row -->
-hapus
+
     <div class="row">
         <!-- Awal Slideshow -->
         <!-- <div class="slideshow-container">
@@ -39,10 +39,10 @@ hapus
     <!-- Content Row -->
     <div class="row">
         <div class="card" style="width: 200px; height: 300px;">
-            <center><img src="<?= base_url();?>assets/img/img-profil/default.png" width="150"></center>    
+            <center><img src="<?= base_url(); ?>assets/img/img-profil/default.png" width="150"></center>
             <div class="mr-2 ml-2 mt-2">
                 <h4 class="mb-0" style="font-weight: bold;">barang</h4>
-                <p>asdasdasdasd ada a asda afafkjbh  abafa</p>
+                <p>asdasdasdasd ada a asda afafkjbh abafa</p>
             </div>
         </div>
     </div>

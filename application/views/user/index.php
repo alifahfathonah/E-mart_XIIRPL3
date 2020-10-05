@@ -1,51 +1,283 @@
+<style>
+    .slide {
+        max-height: 300px;
+    }
+
+    .carousel-item img {
+        max-height: 300px;
+        padding: 5px 20px;
+    }
+</style>
 <!-- Begin Page Content -->
 <div class="container-fluid">
 
-    <!-- Page Heading -->
-    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="<?= base_url(); ?>assets/img/img-profil/default.png" alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="<?= base_url(); ?>assets/img/img-profil/default.png" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="<?= base_url(); ?>assets/img/img-profil/default.png" alt="Third slide">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
 
-    <!-- Content Row -->
-
-    <div class="row">
-        <!-- Awal Slideshow -->
-        <!-- <div class="slideshow-container">
-            <div class="slideshow fade">
-                <div class="numbertext">
-                    1 / 2
-                </div>
-                <img src="../../../assets/img/slider/slide1.png">
-                <div class="text">Contoh keterangan 1</div>
-            </div>
-            <div class="slideshow fade">
-                <div class="numbertext">
-                    2 / 2
-                </div>
-                <img src="../../../assets/img/slider/slide1.png">
-                <div class="text">Contoh keterangan 2</div>
-            </div>
-
-            <a href="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a href="next" onclick="plusSlides(1)">&#10094;</a>
-            <div>
-                <span class="dot" onclick="currentslide(1)"></span>
-                <span class="dot" onclick="currentslide(2)"></span>
-            </div>
-        </div> -->
-        <!-- Akhir Slideshow -->
-    </div>
 
     <!-- Content Row -->
-    <div class="row">
-        <div class="card" style="width: 200px; height: 300px;">
-            <center><img src="<?= base_url(); ?>assets/img/img-profil/default.png" width="150"></center>
-            <div class="mr-2 ml-2 mt-2">
-                <h4 class="mb-0" style="font-weight: bold;">barang</h4>
-                <p>asdasdasdasd ada a asda afafkjbh abafa</p>
+    <div class="container">
+        <div class="row">
+            <h2>Kategori 1</h2>
+            <div class="row">
+                <div class="col mb-4">
+                    <div class="card" style="max-width: 200px;max-height: 280px;">
+                        <img src="<?= base_url(); ?>assets/img/img-profil/default.png" class="card-img-top p-1" alt="" height="170">
+                        <div class="card-body">
+                            <h5 class="card-title">Nama Barang</h5>
+                            <p class="card-text">Harga</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card" style="max-width: 200px;max-height: 280px;">
+                        <img src="<?= base_url(); ?>assets/img/img-profil/default.png" class="card-img-top p-1" alt="" height="170">
+                        <div class="card-body">
+                            <h5 class="card-title">Nama Barang</h5>
+                            <p class="card-text">Harga</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card" style="max-width: 200px;max-height: 280px;">
+                        <img src="<?= base_url(); ?>assets/img/img-profil/default.png" class="card-img-top p-1" alt="" height="170">
+                        <div class="card-body">
+                            <h5 class="card-title">Nama Barang</h5>
+                            <p class="card-text">Harga</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card" style="max-width: 200px;max-height: 280px;">
+                        <img src="<?= base_url(); ?>assets/img/img-profil/default.png" class="card-img-top p-1" alt="" height="170">
+                        <div class="card-body">
+                            <h5 class="card-title">Nama Barang</h5>
+                            <p class="card-text">Harga</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card" style="max-width: 200px;max-height: 280px;">
+                        <img src="<?= base_url(); ?>assets/img/img-profil/default.png" class="card-img-top p-1" alt="" height="170">
+                        <div class="card-body">
+                            <h5 class="card-title">Nama Barang</h5>
+                            <p class="card-text">Harga</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card" style="max-width: 200px;max-height: 280px;">
+                        <img src="<?= base_url(); ?>assets/img/img-profil/default.png" class="card-img-top p-1" alt="" height="170">
+                        <div class="card-body">
+                            <h5 class="card-title">Nama Barang</h5>
+                            <p class="card-text">Harga</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2>Kategori 2</h2>
+            <div class="row">
+                <div class="col mb-4">
+                    <div class="card" style="max-width: 200px;max-height: 280px;">
+                        <img src="<?= base_url(); ?>assets/img/img-profil/default.png" class="card-img-top p-1" alt="" height="170">
+                        <div class="card-body">
+                            <h5 class="card-title">Nama Barang</h5>
+                            <p class="card-text">Harga</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card" style="max-width: 200px;max-height: 280px;">
+                        <img src="<?= base_url(); ?>assets/img/img-profil/default.png" class="card-img-top p-1" alt="" height="170">
+                        <div class="card-body">
+                            <h5 class="card-title">Nama Barang</h5>
+                            <p class="card-text">Harga</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card" style="max-width: 200px;max-height: 280px;">
+                        <img src="<?= base_url(); ?>assets/img/img-profil/default.png" class="card-img-top p-1" alt="" height="170">
+                        <div class="card-body">
+                            <h5 class="card-title">Nama Barang</h5>
+                            <p class="card-text">Harga</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card" style="max-width: 200px;max-height: 280px;">
+                        <img src="<?= base_url(); ?>assets/img/img-profil/default.png" class="card-img-top p-1" alt="" height="170">
+                        <div class="card-body">
+                            <h5 class="card-title">Nama Barang</h5>
+                            <p class="card-text">Harga</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card" style="max-width: 200px;max-height: 280px;">
+                        <img src="<?= base_url(); ?>assets/img/img-profil/default.png" class="card-img-top p-1" alt="" height="170">
+                        <div class="card-body">
+                            <h5 class="card-title">Nama Barang</h5>
+                            <p class="card-text">Harga</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card" style="max-width: 200px;max-height: 280px;">
+                        <img src="<?= base_url(); ?>assets/img/img-profil/default.png" class="card-img-top p-1" alt="" height="170">
+                        <div class="card-body">
+                            <h5 class="card-title">Nama Barang</h5>
+                            <p class="card-text">Harga</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2>Kategori 3</h2>
+            <div class="row">
+                <div class="col mb-4">
+                    <div class="card" style="max-width: 200px;max-height: 280px;">
+                        <img src="<?= base_url(); ?>assets/img/img-profil/default.png" class="card-img-top p-1" alt="" height="170">
+                        <div class="card-body">
+                            <h5 class="card-title">Nama Barang</h5>
+                            <p class="card-text">Harga</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card" style="max-width: 200px;max-height: 280px;">
+                        <img src="<?= base_url(); ?>assets/img/img-profil/default.png" class="card-img-top p-1" alt="" height="170">
+                        <div class="card-body">
+                            <h5 class="card-title">Nama Barang</h5>
+                            <p class="card-text">Harga</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card" style="max-width: 200px;max-height: 280px;">
+                        <img src="<?= base_url(); ?>assets/img/img-profil/default.png" class="card-img-top p-1" alt="" height="170">
+                        <div class="card-body">
+                            <h5 class="card-title">Nama Barang</h5>
+                            <p class="card-text">Harga</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card" style="max-width: 200px;max-height: 280px;">
+                        <img src="<?= base_url(); ?>assets/img/img-profil/default.png" class="card-img-top p-1" alt="" height="170">
+                        <div class="card-body">
+                            <h5 class="card-title">Nama Barang</h5>
+                            <p class="card-text">Harga</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card" style="max-width: 200px;max-height: 280px;">
+                        <img src="<?= base_url(); ?>assets/img/img-profil/default.png" class="card-img-top p-1" alt="" height="170">
+                        <div class="card-body">
+                            <h5 class="card-title">Nama Barang</h5>
+                            <p class="card-text">Harga</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card" style="max-width: 200px;max-height: 280px;">
+                        <img src="<?= base_url(); ?>assets/img/img-profil/default.png" class="card-img-top p-1" alt="" height="170">
+                        <div class="card-body">
+                            <h5 class="card-title">Nama Barang</h5>
+                            <p class="card-text">Harga</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2>Kategori 4</h2>
+            <div class="row">
+                <div class="col mb-4">
+                    <div class="card" style="max-width: 200px;max-height: 280px;">
+                        <img src="<?= base_url(); ?>assets/img/img-profil/default.png" class="card-img-top p-1" alt="" height="170">
+                        <div class="card-body">
+                            <h5 class="card-title">Nama Barang</h5>
+                            <p class="card-text">Harga</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card" style="max-width: 200px;max-height: 280px;">
+                        <img src="<?= base_url(); ?>assets/img/img-profil/default.png" class="card-img-top p-1" alt="" height="170">
+                        <div class="card-body">
+                            <h5 class="card-title">Nama Barang</h5>
+                            <p class="card-text">Harga</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card" style="max-width: 200px;max-height: 280px;">
+                        <img src="<?= base_url(); ?>assets/img/img-profil/default.png" class="card-img-top p-1" alt="" height="170">
+                        <div class="card-body">
+                            <h5 class="card-title">Nama Barang</h5>
+                            <p class="card-text">Harga</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card" style="max-width: 200px;max-height: 280px;">
+                        <img src="<?= base_url(); ?>assets/img/img-profil/default.png" class="card-img-top p-1" alt="" height="170">
+                        <div class="card-body">
+                            <h5 class="card-title">Nama Barang</h5>
+                            <p class="card-text">Harga</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card" style="max-width: 200px;max-height: 280px;">
+                        <img src="<?= base_url(); ?>assets/img/img-profil/default.png" class="card-img-top p-1" alt="" height="170">
+                        <div class="card-body">
+                            <h5 class="card-title">Nama Barang</h5>
+                            <p class="card-text">Harga</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card" style="max-width: 200px;max-height: 280px;">
+                        <img src="<?= base_url(); ?>assets/img/img-profil/default.png" class="card-img-top p-1" alt="" height="170">
+                        <div class="card-body">
+                            <h5 class="card-title">Nama Barang</h5>
+                            <p class="card-text">Harga</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
+    <!-- Content Row -->
+    <div class="row">
+
+    </div>
 </div>
-<!-- /.container-fluid
+<!-- /.container-fluid -->
+</div>
+<!-- End of Main Content -->

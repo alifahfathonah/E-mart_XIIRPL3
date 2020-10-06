@@ -7,6 +7,9 @@
         max-height: 300px;
         padding: 5px 20px;
     }
+    .barang {
+
+    }
 </style>
 <!-- Begin Page Content -->
 <div class="container-fluid">

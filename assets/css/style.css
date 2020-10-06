@@ -93,11 +93,60 @@ button[type=button]:focus,
 	to {opacity: 1}
 }
 /*Akhir Slideshow*/
-.barang {
-	width: 100px;
-	height: 200px;
+.slide {
+	max-height: 300px;
 }
 
-.text-barang {
+.carousel-item img {
+	max-height: 300px;
+	padding: 5px 20px;
+}
+
+.main-barang {
+	width: 100%;
+	padding-right: 0.75rem;
+	padding-left: 0.75rem;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.main-kategori {
+	margin-top: 20px;
+}
+
+.barang {
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 20px;
+	cursor: pointer;
+}
+
+
+
+.card-body {
+	padding: 0 5px 5px 5px;
+}
+.card-body h5 {
+	padding: 0;
+	margin: 0;
+}
+
+.card-body p {
+	font-size: 12px;
+}
+
+.card-footer {
+	height: 30px;
+	padding: 5px;
+}
+
+.card-footer a {
+	display: inline;
+	margin-left: 5px;
+	font-size: 12px;
+}
+.card-footer p {
+	display: inline;
+	margin-right: 5px;
 	font-size: 12px;
 }

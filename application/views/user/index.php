@@ -8,7 +8,7 @@
         padding: 5px 20px;
     }
     .barang {
-
+        font-size: 12px;
     }
 </style>
 <!-- Begin Page Content -->

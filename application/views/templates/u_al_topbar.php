@@ -1,13 +1,14 @@
 <div id="content-wrapper" class="d-flex flex-column">
     <!-- Main Content -->
     <div id="content">
-        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4  static-top shadow flex">    <!-- Logo -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4  static-top shadow">
+            <!-- Logo -->
             <div class="mr-5" style="">
-                <a href="<?=base_url('') ?>" style="width: 100%; color: #858796; text-decoration: none; font-weight: bold;"><i class="fas fa-store-alt fa-2x"></i> E-mart</a>
+                <a href="<?= base_url('') ?>" style="width: 100%; color: #858796; text-decoration: none; font-weight: bold;"><i class="fas fa-store-alt fa-2x"></i> E-mart</a>
             </div>
             <div class="dropdown mt-2">
                 <a href="#" class="nav-link" id="kategoriDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <span style="color: #858796">Kategori <i class="fa fa-chevron-down"></i></span>                        </a>
+                    <span style="color: #858796">Kategori <i class="fa fa-chevron-down"></i></span> </a>
                 <div class="dropdown-menu shadow animated--grow-in" aria-labelledby="kategoriDropdown">
                     <ul>
                         <li>Kategori 1</li>
@@ -81,8 +82,9 @@
                 <!-- Nav Item - User Information -->
                 <li class="nav-item dropdown no-arrow">
                     <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img  class="rounded-circle mr-1" width="30" height="30" src="<?= base_url();?>assets/img/img-profil/<?= $user['img_profil'] ;?>">
-                        <span class="ml-2 mr-2 d-none d-lg-inline text-gray-600 small"><?php $nama = explode(' ', $user['nama']) ; echo $nama[0];?></span>
+                        <img class="rounded-circle mr-1" width="30" height="30" src="<?= base_url(); ?>assets/img/img-profil/<?= $user['img_profil']; ?>">
+                        <span class="ml-2 mr-2 d-none d-lg-inline text-gray-600 small"><?php $nama = explode(' ', $user['nama']);
+                                                                                        echo $nama[0]; ?></span>
                     </a>
                     <!-- Dropdown - User Information -->
                     <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -99,7 +101,7 @@
                             Activity Log
                         </a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="<?= base_url('auth/logout');?>">
+                        <a class="dropdown-item" href="<?= base_url('auth/logout'); ?>">
                             <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                             Logout
                         </a>

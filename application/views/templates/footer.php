@@ -2,7 +2,7 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Toko Online - XII RPL 1 | <?= date('Y') ?></span>
+            <span>Copyright &copy; E-mart - XII RPL 3 | <?= date('Y') ?></span>
           </div>
         </div>
       </footer>

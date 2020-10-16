@@ -3,7 +3,7 @@
     <div id="content">
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4  static-top shadow">
             <!-- Logo -->
-            <div class="mr-5" style="">
+            <div class="mr-5">
                 <a href="<?= base_url('') ?>" style="width: 100%; color: #858796; text-decoration: none; font-weight: bold;"><i class="fas fa-store-alt fa-2x"></i> E-mart</a>
             </div>
             <div class="dropdown mt-2">

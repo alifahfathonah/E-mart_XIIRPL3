@@ -39,8 +39,10 @@ button[type=button]:focus,
 	margin-right: 10px;
 	background-color: rgb(88, 88, 88);
 }
-.slide-item {
-	padding: 5px;
+
+.carousel-item img {
+	max-height: 300px;
+	padding: 5px 20px;
 }
 
 .slideshow-container {

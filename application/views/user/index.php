@@ -5,7 +5,7 @@
     <div class="container-fluid" style="position: relative;">
 
         <div class="row">
-            <div id="carouselExampleIndicators" style="width: 600px;" class="carousel slide" data-ride="carousel">
+            <div id="carouselExampleIndicators" style="width: 600px;" class="carousel slide2" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -34,7 +34,7 @@
 
             <div class="container">
                 <div class="row">
-                    <div class="slide-item">
+                    <div class="slide-item" id="">
                         <img class="d-block w-100" src="<?= base_url(); ?>assets/img/img-profil/default.png">
                     </div>
                 </div>

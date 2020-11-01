@@ -10,23 +10,28 @@
             </div>
             <form class="user" method="post" action="<?= base_url('auth/registrasi') ?>">
               <div class="form-group">
+                <label for="nama" class="ml-2"><b>Nama Lengkap</b></label>
                 <input type="text" class="form-control form-control-user" id="nama" name="nama" placeholder="Nama Lengkap" value="<?= set_value('nama') ?>">
                 <?= form_error('nama', '<small class="text-danger pl-3">', '</small>'); ?>
               </div>
               <div class="form-group">
+                <label for="email" class="ml-2"><b>Email</b></label>
                 <input type="email" class="form-control form-control-user" id="email" name="email" placeholder="Email Address" value="<?= set_value('email')  ?>">
                 <?= form_error('email', '<small class="text-danger pl-3">', '</small>'); ?>
               </div>
               <div class="form-group">
+                <label for="username" class="ml-2"><b>Username</b></label>
                 <input type="text" class="form-control form-control-user" id="username" name="username" placeholder="Username" value="<?= set_value('username') ?>">
                 <?= form_error('username', '<small class="text-danger pl-3">', '</small>'); ?>
               </div>
               <div class="form-group row">
                 <div class="col-sm-6 mb-3 mb-sm-0">
+                  <label for="katasandi" class="ml-2"><b>Katasandi</b></label>
                   <input type="password" class="form-control form-control-user" id="katasandi" name="katasandi" placeholder="Password">
                   <?= form_error('katasandi', '<small class="text-danger pl-3">', '</small>'); ?>
                 </div>
                 <div class="col-sm-6">
+                  <label for="katasandi2" class="ml-2"><b>Ulangi Katasandi</b></label>
                   <input type="password" class="form-control form-control-user" id="katasandi2" name="katasandi2" placeholder="Repeat Password">
                   <?= form_error('katasandi2', '<small class="text-danger pl-3">', '</small>'); ?>
                 </div>
@@ -37,10 +42,7 @@
             </form>
             <hr>
             <div class="text-center">
-              <a class="small" href="forgot-password.html">Forgot Password?</a>
-            </div>
-            <div class="text-center">
-              <a class="small" href="<?= base_url('auth/') ?>">Already have an account? Login!</a>
+              <a class="small" href="<?= base_url('auth/login') ?>">Already have an account? Login!</a>
             </div>
           </div>
         </div>
